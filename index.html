@@ -61,6 +61,9 @@
 
   <center>
     <div id="backgroundcolor"  class="custom-button">
+        <button type="button" class="custom-button" onclick="cmd('bold')">
+            <b><img src="Resources/bold-xxl.png" width="15" height="15" ></b>
+        </button>
 
     </div>
   </center>
@@ -78,7 +81,12 @@
 
     <!-- Internal JS -->
   <script>
-        
+    const format = document.getElementById('editor');
+    
+    function cmd(command, value = null) {
+        document.execCommand(command, false, value);
+        saveState();
+    } 
        
 
   </script>
