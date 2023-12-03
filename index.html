@@ -65,6 +65,10 @@
             <b><img src="Resources/bold-xxl.png" width="15" height="15" ></b>
         </button>
 
+        <button type="button" class="custom-button" onclick="cmd('underline')">
+            <u><img src="Resources/format_underline_white_192x192.png" width="28" height="18" ></u>
+        </button>
+
     </div>
   </center>
 
@@ -82,7 +86,7 @@
     <!-- Internal JS -->
   <script>
     const format = document.getElementById('editor');
-    
+
     function cmd(command, value = null) {
         document.execCommand(command, false, value);
         saveState();
